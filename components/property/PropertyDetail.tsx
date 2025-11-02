@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Property } from '@/types';
+import ReviewSection from './ReviewSection';
 
 interface PropertyDetailProps {
   property: Property;
@@ -60,6 +61,10 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
             </button>
           </div>
         </div>
+
+        <hr className="my-6" />
+      <ReviewSection propertyId={property.id} />
+      
       </div>
     </div>
   );
